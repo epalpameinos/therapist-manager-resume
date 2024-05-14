@@ -1,0 +1,292 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --mainTextColor-light:#000;
+    --secondaryTextColor-light:rgb(51 51 51);
+    --mainLinkColor-light:#0da2b8;
+    --mainBorderColor-light:rgb(218, 218, 218);
+    --mainBgColor-light:rgb(249, 250,251);
+
+    --mainTextColor-dark:#fff;
+    --secondaryTextColor-dark:#adb0b1;
+    --mainLinkColor-dark:rgb(30, 190,214);
+    --mainBorderColor-dark:#2b3031;
+    --mainBgColor-dark:#131415;
+    
+    --mainTextColor:var(--mainTextColor-dark);
+    --secondaryTextColor:var(--secondaryTextColor-dark);
+    --mainLinkColor:var(--mainLinkColor-dark);
+    --mainBorderColor:var(--mainBorderColor-dark);
+    --mainBgColor:var(--mainBgColor-dark);
+}
+
+* {
+    font-family: 'Readex Pro';
+    line-height: 1.5em;
+    box-sizing: border-box;
+    color: var(--mainTextColor);
+}
+
+body {
+    background: var(--mainBgColor);            
+}
+
+p, span, li {
+    color: var(--secondaryTextColor);
+    font-size: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--mainLinkColor);
+    font-weight: 500;
+}
+
+li {
+    line-height: 1.9em;
+}
+
+.main-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.page-section {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4em;
+}
+
+.bio {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: var(--mainLinkColor-dark);
+}
+
+.bio-name {
+    font-size: 3em;
+    line-height: 1em;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.email a,
+.mobile a {
+    color: var(--mainTextColor);
+}
+
+.socials-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75em;
+    flex-wrap: wrap;
+}
+
+.socials-list a {
+    font-weight: 300;
+    color: var(--secondaryTextColor);
+    font-size: 0.9em;
+    transition: 0.3s;
+}
+
+.socials-list a:hover,
+.socials-list i:hover {
+    font-weight: 100;
+    color: var(--mainLinkColor);
+    font-size: 0.9em;
+}
+
+.qualifications-list {
+    list-style: none;
+}
+
+.qualification-list {
+    list-style: none;
+}
+
+.bi-list-check {
+    color: var(--mainLinkColor-dark);
+}
+
+.bi-check {
+    color: var(--mainLinkColor-light);
+}
+
+.skills {
+    color: var(--mainLinkColor-dark);
+}
+
+.work-history-card {
+    border-left: 1px solid var(--mainBorderColor);
+    margin-top: 3em;
+    margin-bottom: 3em;
+    padding-left: 2em;
+}
+
+.work-history-card strong,
+.bi-award-fill {
+    color: var(--mainLinkColor-dark);
+}
+
+.line-break{
+    background-color: var(--mainBorderColor);
+    height: 1px;
+}
+
+@media(max-width:600px) {
+
+    .bio-name {
+        font-size: 2em;
+    }
+
+    .page-section {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    .hero-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+    }
+
+    .work-history-card {
+        border-left: none;
+        padding-left: 0;
+    }
+}
+
+header.major > :last-child {
+    border-bottom: solid 3px var(--mainLinkColor-dark);
+    display: inline-block;
+    margin: 0 0 2em 0;
+    padding: 0 0.75em 0.5em 0; 
+}
+
+.image {
+    border-radius: 0.375em;
+    border: 0;
+    display: inline-block;
+    position: relative; 
+}
+
+.image img {
+    border-radius: 0.375em;
+    display: block; 
+}
+
+a.image {
+    overflow: hidden; 
+}
+    
+a.image img {
+    transition: transform 0.2s ease; 
+}
+    
+a.image:hover img {
+    transform: scale(1.075); 
+} 
+
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 2em -6em;
+    width: calc(100% + 6em); 
+}
+
+.posts article {
+    flex-grow: 0;
+    flex-shrink: 1;
+    margin: 0 0 6em 6em;
+    position: relative;
+    width: calc(33.33333% - 6em); 
+}
+
+.posts article > :last-child {
+    margin-bottom: 0; 
+}
+  
+.posts article .image {
+    display: block;
+    margin: 0 0 2em 0; 
+}
+    
+.posts article .image img {
+    display: block;
+    width: 100%; 
+}
+
+@media screen and (min-width: 1681px) {
+
+    .posts article:nth-last-child(1), .posts article:nth-last-child(2), .posts article:nth-last-child(3) {
+        margin-bottom: 0; 
+    }
+
+}
+
+@media screen and (max-width: 1680px) {
+
+    .posts article {
+        width: calc(50% - 6em); 
+    }
+    .posts article:nth-last-child(3) {
+        margin-bottom: 6em; 
+    } 
+}
+
+@media screen and (min-width: 481px) and (max-width: 1680px) {
+
+    .posts article:nth-last-child(1), .posts article:nth-last-child(2) {
+        margin-bottom: 0; 
+    }
+    
+}
+
+@media screen and (max-width: 736px) {
+
+    .posts {
+        margin: 0 0 2em -4.5em;
+        width: calc(100% + 4.5em); 
+    }
+    .posts article {
+        margin: 0 0 4.5em 4.5em;
+        width: calc(50% - 4.5em); 
+    }
+    .posts article:nth-last-child(3) {
+          margin-bottom: 4.5em; 
+    } 
+}
+
+@media screen and (max-width: 480px) {
+
+    .posts {
+        margin: 0 0 2em 0;
+        width: 100%; 
+    }
+    .posts article {
+        margin: 0 0 4.5em 0;
+        width: 100%; 
+    }
+    .posts article:last-child {
+        margin-bottom: 0; 
+    }
+    
+}
